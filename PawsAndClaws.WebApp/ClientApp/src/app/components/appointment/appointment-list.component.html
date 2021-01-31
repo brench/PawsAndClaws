@@ -1,0 +1,39 @@
+<!--<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>-->
+
+<p *ngIf="!appointments"><em>Loading...</em></p>
+<p *ngIf="appointments && appointments.length == 0"><em>No Appointments</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="appointments && appointments.length > 0">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Pet Name</th>
+      <th>Owner's First Name</th>
+      <th>Owner's Last Name</th>
+      <th>Owner's Phone Number</th>
+      <th>Reason</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{ appointment.date | date:'mediumDate' }}</td>
+      <td>{{ appointment.petName }}</td>
+      <td>{{ appointment.petOwnerFirstName }}</td>
+      <td>{{ appointment.petOwnerLastName }}</td>
+      <td>{{ appointment.petOwnerPhone }}</td>
+      <td>{{ appointment.reason }}</td>
+      <td>
+        <fa-icon [icon]="faEdit" (click)="showEditScreen(appointment)"></fa-icon>
+      </td>
+      <td>
+        <fa-icon [icon]="faTrash" (click)="onDelete(appointment.id)"></fa-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary" (click)="showAddScreen()">Add</button>

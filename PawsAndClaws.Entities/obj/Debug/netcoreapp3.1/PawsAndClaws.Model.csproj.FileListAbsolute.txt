@@ -1,0 +1,9 @@
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\bin\Debug\netcoreapp3.1\PawsAndClaws.Model.deps.json
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\bin\Debug\netcoreapp3.1\PawsAndClaws.Model.dll
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\bin\Debug\netcoreapp3.1\PawsAndClaws.Model.pdb
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\obj\Debug\netcoreapp3.1\PawsAndClaws.Model.csprojAssemblyReference.cache
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\obj\Debug\netcoreapp3.1\PawsAndClaws.Model.AssemblyInfoInputs.cache
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\obj\Debug\netcoreapp3.1\PawsAndClaws.Model.AssemblyInfo.cs
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\obj\Debug\netcoreapp3.1\PawsAndClaws.Model.csproj.CoreCompileInputs.cache
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\obj\Debug\netcoreapp3.1\PawsAndClaws.Model.dll
+C:\Users\bradl\source\repos\PawsAndClaws\PawsAndClaws.Model\PawsAndClaws.Model\obj\Debug\netcoreapp3.1\PawsAndClaws.Model.pdb

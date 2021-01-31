@@ -1,0 +1,85 @@
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        {{addEditLabel}} Appointment</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group" [ngClass]="{'has-error' : appointmentForm.get('petName').errors &&
+             (appointmentForm.get('petName').touched || appointmentForm.get('petName').dirty)}">
+        <label class="col-sm-2 control-label" for="petName">Pet Name</label>
+        <div class="col-sm-8">
+          <input id="petName" formControlName="petName" class="form-control" required maxlength="50">
+          <div class="alert alert-danger" *ngIf="petName.invalid && (petName.dirty || petName.touched)">
+            <div *ngIf="petName.errors.required">
+              Pet Name is Required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error' : appointmentForm.get('petOwnerFirstName').errors &&
+             (appointmentForm.get('petOwnerFirstName').touched || appointmentForm.get('petOwnerFirstName').dirty)}">
+        <label class="col-sm-2 control-label" for="petOwnerFirstName">Owner First Name</label>
+        <div class="col-sm-8">
+          <input id="petOwnerFirstName" formControlName="petOwnerFirstName" class="form-control" maxlength="50">
+          <div class="alert alert-danger" *ngIf="petOwnerFirstName.invalid && (petOwnerFirstName.dirty || petOwnerFirstName.touched)">
+            <span *ngIf="petOwnerFirstName.errors.required">
+              Owner First Name is Required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error' : appointmentForm.get('petOwnerLastName').errors &&
+             (appointmentForm.get('petOwnerLastName').touched || appointmentForm.get('petOwnerLastName').dirty)}">
+        <label class="col-sm-2 control-label" for="petOwnerLastName">Owner Last Name</label>
+        <div class="col-sm-8">
+          <input id="petOwnerLastName" formControlName="petOwnerLastName" class="form-control" maxlength="50">
+          <div class="alert alert-danger" *ngIf="petOwnerLastName.invalid && (petOwnerLastName.dirty || petOwnerLastName.touched)">
+            <span *ngIf="petOwnerLastName.errors.required">
+              Owner Last Name is Required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error' : appointmentForm.get('petOwnerPhone').errors &&
+             (appointmentForm.get('petOwnerPhone').touched || appointmentForm.get('petOwnerPhone').dirty)}">
+        <label class="col-sm-2 control-label" for="petOwnerPhone">Owner Phone Number</label>
+        <div class="col-sm-8">
+          <input id="petOwnerPhone" formControlName="petOwnerPhone" class="form-control" maxlength="50">
+          <div class="alert alert-danger" *ngIf="petOwnerPhone.invalid && (petOwnerPhone.dirty || petOwnerPhone.touched)">
+            <span *ngIf="petOwnerPhone.errors.required">
+              Owner Phone Number is Required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="reason">Reason</label>
+        <div class="col-sm-8">
+          <input id="reason" formControlName="reason" class="form-control" maxlength="500">
+          <div class="alert alert-danger" *ngIf="reason.invalid && (reason.dirty || reason.touched)">
+            <span *ngIf="reason.errors.required">
+              Reason is Required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error' : appointmentForm.get('date').errors &&
+             (appointmentForm.get('date').touched || appointmentForm.get('date').dirty)}">
+        <label class="col-sm-2 control-label" for="date">Date</label>
+        <div class="col-sm-8">
+          <input id="date" formControlName="date" type="date" class="form-control" [min]="today" value="{{ appointment.date | date:'yyyy-MM-dd' }}">
+          <div class="alert alert-danger" *ngIf="date.invalid && (date.dirty || date.touched)">
+            <span *ngIf="date.errors.required">
+              Date is Required.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button class="btn btn-primary" type="submit">Save</button>
+      <button class="btn btn-secondary ml-2" (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+</form>
